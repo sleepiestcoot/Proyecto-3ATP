@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Cuidado Ambiental Escolar</title>
+    <link rel="stylesheet" href="css/contacto.css">
+</head>
+<body>
+    <header class="barra">
+        <nav>
+            <a href="index.html">INICIO</a>
+            <a href="aprende.html">APRENDE</a>
+            <a href="informacion.html">INFORMACION</a>
+            <a href="contacto.html">CONTACTO</a>
+        </nav>
+        <h1>CUIDADO AMBIENTAL ESCOLAR</h1>
+        <img src="img/portada.png" alt="img1">
+    </header>
+
+    <main class="contenido">
+        <h2>CONTACTO</h2>
+        
+        <div class="contenedor-principal">
+          
+            <div class="caja-form">
+                <form class="formULARIO" action="#" method="POST">
+                    <input type="text" name="nombre" class="input" placeholder="Nombre completo" required>
+                    <input type="email" name="correo" class="input" placeholder="Correo institucional o personal" required>
+
+                    <div class="caja-seleccionar">
+                        <select name="grado" class="select" required>
+                            <option value="" disabled selected>Grado (1ro, 3ro, 5to)</option>
+                            <option value="1ro">1ro</option>
+                            <option value="3ro">3ro</option>
+                            <option value="5to">5to</option>
+                        </select>
+                    </div>
+
+                    <textarea name="mensaje" class="textarea" placeholder="Escribe tu reporte sobre áreas sucias, propuestas de reciclaje o sugerencias..." required></textarea>
+                    <button type="submit" class="btn">Enviar reporte</button>
+                </form>
+            </div> 
+
+           
+            <div class="bloque-centro">
+                <img id="img1" src="img/contacto1.png" alt="Cuidado Ambiental CBTA 197" class="img-centro">
+                <p class="parrafo-centro">
+                    TU VOZ HACE LA DIFERENCIA<br><br>
+                    Usa este canal para reportar zonas acumuladas de basura, fugas de agua o proponer proyectos ecológicos para el CBTA 197. ¡Juntos mantenemos limpio nuestro entorno escolar!
+                </p>
+            </div>
+
+        
+            <div class="bloque-derecha">
+                <img id="img2" src="img/contacto2.png" alt="Iniciativas Ecológicas" class="img-derecha">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <h4>&copy; 2026 CBTA 197. Adriel rios 3ATP</h4>
+    </footer>
+</body>
+</html>

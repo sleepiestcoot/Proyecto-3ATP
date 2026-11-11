@@ -1,0 +1,237 @@
+:root {
+    --azul: #2563eb;
+    --rojo: #dc2626;
+    --verde: #16a34a;
+    --amarillo: #f59e0b;
+    --morado: #7c3aed;
+    --rosa: #db2777;
+    --naranja: #ea580c;
+    --gris-claro: #f3f4f6;
+    --gris-oscuro: #1f2937;
+    --negro: #111827;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: var(--negro);
+    color: white;
+    padding-bottom: 3.5rem;
+}
+
+
+.barra {
+    display: flex;
+    flex-direction: column;    
+    position: relative;        
+    padding: 35px 50px 35px 260px; 
+    background-color: var(--azul);    
+    border-bottom: 4px solid var(--amarillo);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); 
+}
+
+.barra nav {
+    order: 1;                
+    display: flex;
+    justify-content: flex-end; 
+    gap: 15px;                
+    margin-right: 40px;
+}
+
+.barra nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 24px; 
+    border-radius: 8px; 
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s ease;
+}
+
+.barra nav a:hover {
+    color: var(--azul);
+    background-color: var(--amarillo); 
+    border-color: var(--amarillo);
+    transform: translateY(-2px);
+}
+
+.barra h1 {
+    order: 2;                
+    text-align: right;        
+    margin: 15px 40px 0 0;
+    font-size: 2.8rem; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.barra img {
+    position: absolute;      
+    left: 50px;                
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 150px; 
+    border-radius: 50%; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); 
+    transition: transform 0.3s ease;
+}
+
+.barra img:hover {
+    animation: latidoLogo 0.6s ease infinite alternate;
+}
+
+
+.seccion {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 28px;
+    align-items: start;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.columna {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.columna-centro {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+    height: 380px;
+}
+
+
+.titulo-caja {
+    background-color: var(--azul);
+    color: white;
+    width: fit-content;
+    padding: 9px 20px;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    margin: 0 0 20px 0;
+    transition: background-color 0.3s ease;
+}
+
+.titulo-caja:hover {
+    background-color: var(--amarillo);
+    color: var(--negro);
+}
+
+
+.imagen-contenedor {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 9px;
+}
+
+.imagen-contenedor img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 9px;
+    transition: transform 0.3s ease;
+}
+
+.imagen-contenedor img:hover {
+    transform: scale(1.02);
+}
+
+.img-principal {
+    height: 380px;
+}
+
+.img-dividida {
+    height: 184px;
+}
+
+
+.texto {
+    
+    color: white;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 0;
+}
+
+footer {
+    background-color: var(--azul);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.5rem;
+}
+
+
+@keyframes latidoLogo {
+    0% {
+        transform: translateY(-50%) scale(1) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-50%) scale(1.05) rotate(3deg);
+    }
+    100% {
+        transform: translateY(-50%) scale(1.03) rotate(0deg);
+    }
+}
+
+
+@media (max-width: 968px) {
+    .barra {
+        padding: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .barra img {
+        position: static;
+        transform: none;
+        margin-bottom: 15px;
+        max-width: 100px;
+    }
+
+    .barra img:hover {
+        animation: none;
+        transform: scale(1.05);
+    }
+
+    .barra h1 {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 2rem;
+    }
+
+    .barra nav {
+        justify-content: center;
+        margin-right: 0;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .seccion {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .columna-centro {
+        margin-top: 0;
+        height: auto;
+        gap: 20px;
+    }
+
+    .img-principal, .img-dividida {
+        height: 250px;
+    }
+}
